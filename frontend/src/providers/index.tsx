@@ -11,7 +11,7 @@ export const Providers: FC = ({ children }) => {
       <ChakraProvider>
         <CSSReset />
         <AuthProvider>
-          <Container maxW="full" bgColor="gray.100">
+          <Container maxW="full" minH="100vh" bgColor="gray.100" padding="0">
             {children}
           </Container>
         </AuthProvider>

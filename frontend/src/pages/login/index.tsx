@@ -23,7 +23,7 @@ const Home: NextPage = () => {
   const { loading, login } = useAuth()
 
   return (
-    <Center minW="full" minH="100vh" position="relative" overflow="hidden">
+    <Center minH="inherit" position="relative" overflow="hidden">
       <Box position="absolute" top="0" left="0" w="100vw" h="100vh" bgColor="green.400" />
       <Box position="absolute" top="0" left="0" w="100vw" h="100vh" bgColor="gray.100" transform="rotate(37.5deg)" transformOrigin="left top" />
       <Image src="/images/login-image.svg" alt="bookshelf" position="absolute" left="2rem" bottom="2rem" w="30%" pointerEvents="none" />

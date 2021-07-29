@@ -1,12 +1,16 @@
-import { NextPage } from 'next/types'
-import { Center, Box, FormControl, FormLabel, Input, FormErrorMessage, Button, Img, Text, VStack } from '@chakra-ui/react'
-import { useForm } from 'react-hook-form'
+import { useUserInfo } from '@/hooks/useUserInfo'
+
+import { Center, Heading } from '@chakra-ui/react'
+
+import type { NextPage } from 'next/types'
 
 const Home: NextPage = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm({ mode: 'all' })
+  const { loginUser } = useUserInfo()
 
   return (
-    <h1>Home</h1>
+    <Center minH="inherit">
+      <Heading>ユーザー：{ loginUser?.id }</Heading>
+    </Center>
   )
 }
 
