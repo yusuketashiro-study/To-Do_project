@@ -1,14 +1,13 @@
-import { ChakraProvider, CSSReset } from '@chakra-ui/react'
+import { Providers } from '@/providers'
 
 import type { NextPage } from 'next/types'
 import type { AppProps } from 'next/app'
 
 const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
   return (
-    <ChakraProvider>
-      <CSSReset />
+    <Providers>
       <Component {...pageProps} />
-    </ChakraProvider>
+    </Providers>
   )
 }
 
